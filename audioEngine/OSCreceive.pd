@@ -1,0 +1,54 @@
+#N canvas 0 102 1351 686 10;
+#X obj 189 103 maxlib/speedlim 0;
+#X obj 189 85 iemnet/udpreceive 7770;
+#X obj 190 122 osc/unpackOSC;
+#X obj 41 -44 import iemnet;
+#X obj 189 142 osc/routeOSC /gpredict;
+#X obj 190 167 osc/routeOSC /sats;
+#X text 336 86 ALL DATA;
+#X obj -40 100 maxlib/speedlim 0;
+#X obj -39 119 osc/unpackOSC;
+#X obj -40 139 osc/routeOSC /gpredict;
+#X obj -41 161 osc/routeOSC /sats;
+#X text -66 58 if satellite is passing or not (0 | 1 );
+#X obj -40 82 iemnet/udpreceive 9999;
+#X obj -35 266 OSCthereis TKSAT-1_(TUPAC_KATARI) t;
+#X obj -11 298 OSCthereis OAE01---Oficina_de_Asuntos_Extraterestres
+oae;
+#X obj 60 375 OSCthereis MSST00---Movimento_do_Sem_SaTelites msst;
+#X obj 109 433 OSCthereis NEE-02-KRYSAOR---Agencia_Espacial_Civil_Ecuatoriana
+krysaor;
+#X obj 191 189 s satData;
+#X obj 78 405 OSCthereis ANNAN01---Agencia_Espacial_Palestina amman
+;
+#X obj 18 338 OSCthereis ficciONE---African_Space_Research_Program
+asrp;
+#X obj -42 192 t a a a a a a a a a;
+#X obj 146 471 OSCthereis NEE-01-PEGASUS---Agencia_Espacial_Civil_Ecuatoriana
+pegasus;
+#X obj 174 526 OSCthereis ULISES02---Colectivo_Espacial_Mexicano ulises
+;
+#X obj 90 206 spigot 0;
+#X obj 109 180 r debug;
+#X obj 86 226 print debug::;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 17 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 20 0;
+#X connect 12 0 7 0;
+#X connect 20 0 13 0;
+#X connect 20 1 14 0;
+#X connect 20 2 19 0;
+#X connect 20 3 15 0;
+#X connect 20 4 18 0;
+#X connect 20 5 16 0;
+#X connect 20 6 21 0;
+#X connect 20 7 22 0;
+#X connect 20 8 23 0;
+#X connect 23 0 25 0;
+#X connect 24 0 23 1;

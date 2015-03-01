@@ -1,0 +1,18 @@
+#N canvas 0 102 450 300 10;
+#X floatatom 87 191 5 0 0 0 - - -, f 5;
+#X obj 90 137 inlet;
+#X obj 88 162 osc/routeOSC /\$1;
+#X obj 85 237 s \$2;
+#X text 216 160 \$2 - message channel;
+#X text 215 142 \$1 - satellite name;
+#X obj 285 201 r satData;
+#X obj 285 223 OSCroutesat \$1 \$2;
+#X obj 80 215 3;
+#X msg 112 216 1;
+#X msg 24 199 0;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 6 0 7 0;
+#X connect 9 0 3 0;
+#X connect 10 0 3 0;
